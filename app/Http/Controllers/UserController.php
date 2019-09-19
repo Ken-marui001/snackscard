@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 
 class UserController extends Controller
 {
@@ -10,11 +11,12 @@ class UserController extends Controller
     {
         $this->middleware('auth')->except(['index']);
     }
-    public function edit(int $id){
-        return view('users/edit');
+
+    public function edit(User $id){
+        return view('users/edit', ['user'=> $id]);
     }
 
-    public function update(Request $request, int $id){
-        $user = User::find($id);
+    public function update(Request $request, User $id){
+        
     }
 }
