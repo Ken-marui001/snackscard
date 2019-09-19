@@ -11,11 +11,6 @@ class SnackController extends Controller
     {
         $this->middleware('auth')->except(['index']);
     }
-
-    public function fullAccess(){
-        $snacks = Snack::all();
-        return view('snacks/index', ['snacks' => $snacks,]);
-    }
     
     public function index(){
         $snacks = Snack::all();
