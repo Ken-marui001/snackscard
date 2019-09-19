@@ -3,10 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Snack;
+use App\User;
 use Illuminate\Http\Request;
 
 class SnackController extends Controller
 {
+    public function fullAccess(){
+        $snacks = Snack::all();
+        return view('snacks/index', ['snacks' => $snacks,]);
+    }
+    
     public function index(){
         $snacks = Snack::all();
         return view('snacks/index', ['snacks' => $snacks,]);
