@@ -1,49 +1,8 @@
-//
-.field {
-  margin-bottom: 10px;
-  display:flex;
-  flex-wrap: wrap;
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
 
-  .field-label {
-    padding: 10px 0;
-    letter-spacing: 1px;
-    font-size: 14px;
-    font-weight: 200;
+// Variables
+@import 'variables';
 
-    i {
-      font-size: 11px;
-    }
-  }
-
-  .field-input {
-    input {
-      width: 100%;
-      padding: 10px;
-      margin-left: 20px;
-      letter-spacing: 1px;
-    }
-  }
-}
-.area-field {
-  margin-bottom: 10px;
-
-  .field-label {
-    padding: 10px 0;
-    letter-spacing: 1px;
-    font-size: 14px;
-    font-weight: 200;
-
-    i {
-      font-size: 11px;
-    }
-  }
-
-  .field-input {
-    input {
-      width: 100%;
-      padding: 10px;
-      margin-left: 20px;
-      letter-spacing: 1px;
-    }
-  }
-}
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';

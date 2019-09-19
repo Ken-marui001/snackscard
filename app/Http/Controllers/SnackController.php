@@ -3,11 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Snack;
-use App\User;
 use Illuminate\Http\Request;
 
 class SnackController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth')->except(['index']);
+    }
+
     public function fullAccess(){
         $snacks = Snack::all();
         return view('snacks/index', ['snacks' => $snacks,]);

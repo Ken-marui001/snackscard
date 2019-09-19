@@ -7,3 +7,4 @@ Route::get('/snacks/new', 'SnackController@new') -> name('snacks.new');
 Route::get('/', 'SnackController@fullAccess') ->name('home');
 
 Auth::routes();
+
