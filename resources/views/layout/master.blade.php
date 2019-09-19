@@ -9,11 +9,15 @@
 <body>
   @section('header')
     <header>
-      <div class="header-title"><p>SnacksCard</p></div>
-      <div class="user-info">
-      <a href="/users/{{Auth::user()->id}}/edit"><P>{{Auth::user()->name}}</P></a>
-        <img src="/storage/{{(Auth::user()->image_url) ? Auth::user()->image_url : "noimage.png"}}" />
-      </div>
+      <div class="header-title"><a href="/"><p>SnacksCard</p></a></div>
+      @if (Auth::check())
+        <div class="user-info">
+        <a href="/users/{{Auth::user()->id}}/edit"><P>{{Auth::user()->name}}</P></a>
+          <img src="{{(Auth::user()->image_url) ? ("/storage/".Auth::user()->image_url) : "/storage/kQ8fD8bLKMN8VHFdckueUmNx8PACGxSKNkcyksqo.png"}}" />
+        </div>     
+      @else
+        <div class="login-btn"><a href="/login">ログイン</a></div>
+      @endif
     </header>
   @show
   <main>

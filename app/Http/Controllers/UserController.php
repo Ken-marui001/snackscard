@@ -12,11 +12,22 @@ class UserController extends Controller
         $this->middleware('auth')->except(['index']);
     }
 
-    public function edit(User $id){
-        return view('users/edit', ['user'=> $id]);
+    public function edit(User $user){
+        return view('users/edit', ['user'=> $user]);
     }
 
-    public function update(Request $request, User $id){
+    public function update(Request $request, User $user){
+
+        $originalImg = $request->image_url;
         
+        $user->name = $request->name;
+        $user->email = $request->email;
+        if($originalImg) {
+            $filePath = $originalImg->store('public');
+            $user->image_url = str_replace('public/', '', $filePath);
+        }
+        $user->save();
+
+        return redirect()->route('users.edit', ['user'=> $user]);
     }
 }
