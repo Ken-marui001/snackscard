@@ -7,3 +7,91 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+$header-color: rgb(197, 197, 197);
+
+
+
+.field {
+  margin-bottom: 10px;
+  display:flex;
+  flex-wrap: wrap;
+
+  .field-label {
+    padding: 10px 0;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: 200;
+
+    i {
+      font-size: 11px;
+    }
+  }
+
+  .field-input {
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-left: 20px;
+      letter-spacing: 1px;
+    }
+  }
+}
+.area-field {
+  margin-bottom: 10px;
+
+  .field-label {
+    padding: 10px 0;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: 200;
+
+    i {
+      font-size: 11px;
+    }
+  }
+
+  .field-input {
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-left: 20px;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+header{
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+  font-size: 20px;
+  color: lighten($header-color, 20%);
+  background-color: $header-color;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .header-title{
+    padding: 0 20px;
+  }
+  .user-info{
+    width: 200px;
+    height: 70px;
+    display: flex;
+    p{
+      width: 100px;
+      text-align: right;
+    }
+    img{
+      margin: 5px 20px;
+      margin-left: 20px;
+      width: 60px;
+      height: 60px;
+      border-radius: 60px;
+    }
+  }
+}
+
+main{
+  width: 80%;
+  margin: 10px auto;
+}

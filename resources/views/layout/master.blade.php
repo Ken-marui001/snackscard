@@ -9,10 +9,10 @@
 <body>
   @section('header')
     <header>
-      <div class="header_title"><p>SnacksCard</p></div>
+      <div class="header-title"><p>SnacksCard</p></div>
       <div class="user-info">
+      <a href="/users/{{Auth::user()->id}}/edit"><P>{{Auth::user()->name}}</P></a>
         <img src="/storage/{{(Auth::user()->image_url) ? Auth::user()->image_url : "noimage.png"}}" />
-        <P>{{Auth::user()->name}}</P>
       </div>
     </header>
   @show

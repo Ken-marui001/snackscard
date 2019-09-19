@@ -2,7 +2,7 @@
 
 @section('contents')
 <div class="form">
-<form action="{{route('snacks.create')}}" method="POST">
+<form action="{{route('snacks')}}" method="POST">
   @csrf
   <div class="field">
     <div class="field-label">
