@@ -1,4 +1,20 @@
-//
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+$header-color: rgb(197, 197, 197);
+
+*{
+  box-sizing: border-box;
+}
+
+
+
 .field {
   margin-bottom: 10px;
   display:flex;
@@ -46,4 +62,62 @@
       letter-spacing: 1px;
     }
   }
+}
+
+header{
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+  font-size: 20px;
+  color: lighten($header-color, 20%);
+  background-color: $header-color;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .header-title{
+    padding: 0 20px;
+  }
+  .user-info{
+    width: 200px;
+    height: 70px;
+    display: flex;
+    p{
+      width: 100px;
+      text-align: right;
+    }
+    img{
+      margin: 5px 20px;
+      margin-left: 20px;
+      width: 60px;
+      height: 60px;
+      border-radius: 60px;
+    }
+  }
+  .login-btn{
+    width: 100px;
+    height: 50px;
+    line-height: 30px;
+    padding: 10px;
+    margin: 10px 20px;
+    border: solid 1px lighten($header-color, 20%);
+    border-radius: 10px;
+  }
+  .login-btn:hover{
+    background-color: lighten($header-color, 20%);
+    a{
+      color: $header-color;
+    }
+  }
+}
+.header-title a, .login-btn a, .user-info a{
+  color: lighten($header-color, 20%);
+}
+
+main{
+  width: 80%;
+  margin: 10px auto;
+}
+
+#image_url{
+  display: none;
 }

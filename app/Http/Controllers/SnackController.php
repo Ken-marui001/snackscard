@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class SnackController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth')->except(['index']);
+    }
+    
     public function index(){
         $snacks = Snack::all();
         return view('snacks/index', ['snacks' => $snacks,]);
